@@ -43,4 +43,10 @@ if [[ -e "/Applications/Xcode.app/Contents/Resources/Packages/XcodeSystemResourc
   /usr/sbin/installer -dumplog -verbose -pkg "/Applications/Xcode.app/Contents/Resources/Packages/XcodeSystemResources.pkg" -target /
 fi
 
+# Install XcodeExtensionSupport.pkg so there is no prompt
+
+if [[ -e "/Applications/Xcode.app/Contents/Resources/Packages/XcodeExtensionSupport.pkg" ]]; then
+/usr/sbin/installer -dumplog -verbose -pkg "/Applications/Xcode.app/Contents/Resources/Packages/XcodeExtensionSupport.pkg" -target /
+fi
+
 exit 0
